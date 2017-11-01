@@ -12,12 +12,13 @@ public class Main {
 		boolean run = true;
 		
 		LocalDate today = LocalDate.now();			
-		LocalDate inOneDay = today.plusDays(1);
+		
 
 //		activity 
 //		- Time/deadLine
-//		- String/description
+//		 String description;
 //		- Time/startTime
+//      - int taskID
 
 		Scanner scan = new Scanner(System.in);	
 		do {
@@ -103,6 +104,9 @@ public class Main {
 		} while (run == true);
 		System.out.println("exited");
 		System.out.println(today);
+		scan.close();
+		
 
+// Close Scanner
 	}
 }
