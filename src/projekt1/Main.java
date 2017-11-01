@@ -107,6 +107,5 @@ public class Main {
 		scan.close();
 		
 
-// Close Scanner
 	}
 }
