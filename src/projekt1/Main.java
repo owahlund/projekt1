@@ -1,5 +1,8 @@
 package projekt1;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -10,16 +13,25 @@ public class Main {
 		String description;
 		int n;
 		boolean run = true;
+		int taskID;
 		
-		LocalDate today = LocalDate.now();			
+		LocalDate today = LocalDate.now();	
+		LocalDate inFiveDays = today.plusDays(5);
+	//	LocalDate fiveDaysAgo = today.minusDays(10000);
+	//	LocalDate futureDays = today.plusDays(300000);
 		
-
-//		activity 
-//		- Time/deadLine
-//		 String description;
-//		- Time/startTime
-//      - int taskID
-
+		List<LocalDate> deadLineList = new ArrayList<LocalDate>();
+		List<LocalDate> startTimeList = new ArrayList<LocalDate>();
+		List<String> descriptionString = new ArrayList<String>();
+        
+		deadLineList.add(today);
+        startTimeList.add(today);
+        descriptionString.add(" Semester  idag");
+        
+        deadLineList.add(inFiveDays);
+        startTimeList.add(inFiveDays);
+        descriptionString.add("färdig semester");
+		
 		Scanner scan = new Scanner(System.in);	
 		do {
 			System.out.println();
@@ -57,6 +69,7 @@ public class Main {
 			case 1:
 				System.out.println(n);
 				System.out.println();
+				
 				break;
 			case 2:
 				System.out.println(n);
@@ -77,6 +90,15 @@ public class Main {
 			case 6:
 				System.out.println(n);
 				System.out.println();
+				
+				Iterator<LocalDate> it1 = deadLineList.iterator();
+				// Better aproach for modify operations
+				while (it1.hasNext()) {
+					LocalDate tmpDate = it1.next();
+				System.out.println(tmpDate);
+				System.out.println(startTimeList.get(0));
+				System.out.println(descriptionString.get(0));
+				}
 				break;				
 			case 7:
 				System.out.println(n);
