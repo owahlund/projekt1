@@ -17,7 +17,7 @@ public class Main {
 		
 		
 		k1.printAll();
-		
+		System.out.println("rad 20");
 		String description;
 		int n;
 		boolean run = true;
@@ -93,15 +93,15 @@ public class Main {
 			case 6:
 				System.out.println(n);
 				System.out.println();
-				
-				Iterator<LocalDate> it1 = deadLineList.iterator();
-				// Better aproach for modify operations
-				while (it1.hasNext()) {
-					LocalDate tmpDate = it1.next();
-				System.out.println(tmpDate);
-				System.out.println(startTimeList.get(0));
-				System.out.println(descriptionString.get(0));
-				}
+				k1.printAll();
+		//		Iterator<LocalDate> it1 = deadLineList.iterator();
+		// Better aproach for modify operations
+		//		while (it1.hasNext()) {
+		//			LocalDate tmpDate = it1.next();
+		//		System.out.println(tmpDate);
+		//		System.out.println(startTimeList.get(0));
+		//		System.out.println(descriptionString.get(0));
+		//		}
 				break;				
 			case 7:
 				System.out.println(n);

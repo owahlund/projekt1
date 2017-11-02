@@ -1,6 +1,7 @@
 package projekt1;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Kalender {
 	
@@ -16,7 +17,14 @@ public class Kalender {
 		this.toDoList = toDoList;
 	}
     
+    
+    public void addActivity(Date today) {
+    	AddActivity d= new AddActivity();
+    //oDoList.add(d);
+    }
+    
     public void printAll() {
+    	System.out.println("Print all from Kalender:");
     	for (Tasks t : toDoList) {
     		t.print();
     		
