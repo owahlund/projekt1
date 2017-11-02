@@ -9,17 +9,22 @@ public class Main {
 	
 	public static void main(String[] args) {
 		System.out.println("rad 10");
-													//		toDoList
+		
+		Kalender k1 = new Kalender("Linus");
+		
+	//	k1.addActivity;
+	//	k1.checkDeadlineActivity;
+		
+		
+		k1.printAll();
+		
 		String description;
 		int n;
 		boolean run = true;
 		int taskID;
 		
 		LocalDate today = LocalDate.now();	
-		LocalDate inFiveDays = today.plusDays(5);
-	//	LocalDate fiveDaysAgo = today.minusDays(10000);
-	//	LocalDate futureDays = today.plusDays(300000);
-	// jkfldjklfjsdlkfklsklfjsdlkflkj	
+
 		List<LocalDate> deadLineList = new ArrayList<LocalDate>();
 		List<LocalDate> startTimeList = new ArrayList<LocalDate>();
 		List<String> descriptionString = new ArrayList<String>();
@@ -28,9 +33,7 @@ public class Main {
         startTimeList.add(today);
         descriptionString.add(" Semester  idag");
         
-        deadLineList.add(inFiveDays);
-        startTimeList.add(inFiveDays);
-        descriptionString.add("färdig semester");
+        
 		
 		Scanner scan = new Scanner(System.in);	
 		do {
