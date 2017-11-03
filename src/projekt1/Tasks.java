@@ -1,4 +1,4 @@
-package projekt1;
+/*package projekt1;
 
 public abstract class Tasks {
 	private int id;
@@ -19,3 +19,4 @@ public abstract class Tasks {
 		
 	}
 }
+*/

@@ -8,16 +8,74 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-		System.out.println("rad 10");
 		
-		Kalender k1 = new Kalender("Linus");
+		
+ToDoList ItemArray = new ToDoList();
+	
+		
+		Item fack1 = new Item(1,"Semester", "2017-10-28", "2017-12-24");
+		Item fack2 = new Item(2,"Arbete  ", "2017-08-22", "2017-09-22");
+		Item fack3 = new Item(3,"semester", "2017-12-22", "2018-01-01");
+		Item fack4 = new Item(4,"Ledig   ", "2017-11-22", "2018-01-19");
+		
+		
+		ItemArray.addItem(fack1);
+		ItemArray.addItem(fack2);
+		ItemArray.addItem(fack3);
+		ItemArray.addItem(fack4);
+		
+		
+	    
+		//	ItemArray.listItems();
+			
+		//	Item findItem = ItemArray.findItem("2017-09-22");
+			
+			
+			//System.out.println("Det finns aktivitet " + findItem);
+			
+			System.out.println("Antal tasks i To do list   " + ItemArray.getAntalActions());
+			
+		
+		  
+		
+		  //  ItemArray.listItems();
+	
+		//	  ItemArray.listItems();
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//System.out.println("rad 10");
+		
+		
+		
+		
+		
+	//	Kalender k1 = new Kalender("Linus");
 		
 	//	k1.addActivity;
 	//	k1.checkDeadlineActivity;
 		
 		
-		k1.printAll();
-		System.out.println("rad 20");
+//		k1.printAll();
+//		System.out.println("rad 20");
 		String description;
 		int n;
 		boolean run = true;
@@ -25,17 +83,18 @@ public class Main {
 		
 		LocalDate today = LocalDate.now();	
 
-		List<LocalDate> deadLineList = new ArrayList<LocalDate>();
-		List<LocalDate> startTimeList = new ArrayList<LocalDate>();
-		List<String> descriptionString = new ArrayList<String>();
+	//	List<LocalDate> deadLineList = new ArrayList<LocalDate>();
+		//List<LocalDate> startTimeList = new ArrayList<LocalDate>();
+	//	List<String> descriptionString = new ArrayList<String>();
         
-		deadLineList.add(today);
-        startTimeList.add(today);
-        descriptionString.add(" Semester  idag");
+		//deadLineList.add(today);
+   //     startTimeList.add(today);
+     //   descriptionString.add(" Semester  idag");
         
         
-		
-		Scanner scan = new Scanner(System.in);	
+		{	
+		Scanner scan = new Scanner(System.in);
+		System.out.println("scanner");
 		do {
 			System.out.println();
 			System.out.println("Hi, today is :");
@@ -70,6 +129,10 @@ public class Main {
 			n = scan.nextInt();
 			switch (n) {
 			case 1:
+
+				Item fack5 = new Item(5,"Ledig igen  ", "2017-11-22", "2018-01-19");
+				
+				ItemArray.addItem(fack5);
 				System.out.println(n);
 				System.out.println();
 				
@@ -83,6 +146,10 @@ public class Main {
 				System.out.println();
 				break;
 			case 4:
+
+				Item findItem = ItemArray.findItem("2017-09-22");
+				System.out.println("Deadline passerad för aktivitet " + findItem);
+				
 				System.out.println(n);
 				System.out.println();
 				break;	
@@ -93,7 +160,8 @@ public class Main {
 			case 6:
 				System.out.println(n);
 				System.out.println();
-				k1.printAll();
+				  ItemArray.listItems();
+		//		k1.printAll();
 		//		Iterator<LocalDate> it1 = deadLineList.iterator();
 		// Better aproach for modify operations
 		//		while (it1.hasNext()) {
@@ -131,6 +199,9 @@ public class Main {
 		System.out.println(today);
 		scan.close();
 		
-
+		}
 	}
-}
+	}
+
+
+

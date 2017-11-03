@@ -1,4 +1,4 @@
-package projekt1;
+/*package projekt1;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,14 +12,14 @@ public class Kalender {
 		super();
 		this.owner = owner;
 		toDoList = new ArrayList<Tasks>();
-		toDoList.add(new Creation());
+		toDoList.add(new Item());
 		
 		this.toDoList = toDoList;
 	}
     
     
     public void addActivity(Date today) {
-    	AddActivity d= new AddActivity();
+    	ToDoList d= new ToDoList();
     //oDoList.add(d);
     }
     
@@ -31,3 +31,4 @@ public class Kalender {
     	}
     }
 }
+*/
