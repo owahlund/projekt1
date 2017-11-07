@@ -1,38 +1,61 @@
 package projekt1;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Item {
-	
+
 	private String description;
-	private String Datum;
+	private LocalDate Datum;
 	private int id;
-	private String slutdatum;
-{	
-	/*LocalDate today = LocalDate.now();
-	LocalDate inFiveDays = today.plusDays(5);
-//	LocalDate fiveDaysAgo = today.minusDays(5);
-	{	
-	Datum = today;
-	slutdatum = inFiveDays;*/
+	private LocalDate slutdatum;
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalDate getDatum() {
+		return Datum;
+	}
+
+	public void setDatum(LocalDate datum) {
+		Datum = datum;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setSlutdatum(LocalDate slutdatum) {
+		this.slutdatum = slutdatum;
+	}
+
+	public Item(int id, String description, String Datum, String slutdatum) {
+		LocalDate.parse(slutdatum, DateTimeFormatter.ISO_DATE);
+		this.description = description;
+		this.Datum = LocalDate.now();
+		this.id = id;
+		this.slutdatum = LocalDate.parse(slutdatum, DateTimeFormatter.ISO_DATE);;
 
 	}
 
-public Item(int id,String description, String Datum, String slutdatum) {
-	
-	this.description = description;
-	this.Datum = Datum;
-	this.id=id;
-	this.slutdatum=slutdatum;
-	
-}
-public String getSlutdatum() {
-	return slutdatum;
-	
-	
-}
+	public LocalDate getSlutdatum() {
+		return slutdatum;
 
+	}
 
-@Override
-public String toString() {
-	return " nr " + id +" " + description + " " + "Från "+ Datum + " Till "+ slutdatum;
-}
+	@Override
+	public String toString() {
+		return " nr " + id + " " + description + " " + "Frånn " + Datum + " Till " + slutdatum;
+	}
 }

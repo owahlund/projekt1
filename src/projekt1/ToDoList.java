@@ -1,45 +1,59 @@
 package projekt1;
 
-public class ToDoList {
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
- 	public static int antalActions = 0;
-	private int nextPosition = 0;
-	
-	private Item[] itemArray = new Item[100];
-	
+public class ToDoList {
+	private List<Item> itemList = new ArrayList<Item>();
+
 	public void addItem(Item newItem) {
-	itemArray[nextPosition] = newItem;
-		++nextPosition;
-		++antalActions;
-	}	
-	
-	public Item findItem(String slutdatum) {
-		for (int i = 0; i < nextPosition; i++) {
-			if (itemArray[i].getSlutdatum().equals(slutdatum)) {
-		    return itemArray[i];	
-			}   
+		itemList.add(newItem);
 	}
-		return null;
-		
-	}
-	public void listItems() {
-		for (Item temp : itemArray) {
-			if (temp != null) {
-				System.out.println(temp);
+
+	public void removeItem(int itId) {
+		Iterator<Item> it = itemList.iterator();
+
+		while (it.hasNext()) {
+			Item i = it.next();
+			if (i.getId() == itId) {
+				it.remove();
 			}
+
+		}
+
+	}
+
+	public Item findItem(String slutdatum) {
+		for (int i = 0; i <= itemList.size(); i++) {
+			if (itemList.get(i).getSlutdatum().equals(slutdatum)) {
+				return itemList.get(i);
+			}
+		}
+		return null;
+	}
+
+	public void listItems() {
+		for (Item temp : itemList) {
+			System.out.println(temp);
 		}
 	}
 
-	public Item[] getItemArray() {
-		return itemArray;
+	public List<Item> getItemList() {
+		return itemList;
 	}
 
-	public void setItemArray(Item[] itemArray) {
-		this.itemArray = itemArray;
+	public void dummyValues() {
+		Item fack1 = new Item(1, "Semester", "2017-10-28", "2017-12-24");
+		Item fack2 = new Item(2, "Arbete  ", "2017-08-22", "2017-09-22");
+		Item fack3 = new Item(3, "semester", "2017-12-22", "2018-01-01");
+		Item fack4 = new Item(4, "Ledig   ", "2017-11-22", "2018-01-19");
+
+		itemList.add(fack1);
+		itemList.add(fack2);
+		itemList.add(fack3);
+		itemList.add(fack4);
+
 	}
 
-	public int getAntalActions() {
-		return antalActions;
-	}
 }
-
