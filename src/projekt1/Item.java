@@ -59,3 +59,4 @@ public class Item {
 		return " nr " + id + " " + description + " " + "Frånn " + Datum + " Till " + slutdatum;
 	}
 }
+ 
