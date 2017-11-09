@@ -56,7 +56,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return " nr " + id + " " + description + " " + "Frånn " + Datum + " Till " + slutdatum;
+		return " nr " + id + " " + description + " " + "Från " + Datum + " Till " + slutdatum;
 	}
 }
  
