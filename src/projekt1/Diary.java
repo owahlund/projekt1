@@ -15,7 +15,7 @@ public class Diary extends JFrame
   private JCheckBox sort, deadlines, plusday;
   public Diary()
   {
-      this.setSize(620,400);
+      this.setSize(420,200);
       this.setTitle("Vad göra ?");
       this.setDefaultCloseOperation(
           JFrame.EXIT_ON_CLOSE);
@@ -29,7 +29,7 @@ public class Diary extends JFrame
       add.setSelected(true);
       sizePanel.add(add);
       sizeGroup.add(add);
-      delete = new JRadioButton("Ta bort en post");   
+      delete = new JRadioButton("Ta bort en post ");   
       sizePanel.add(delete);
       sizeGroup.add(delete);
       print = new JRadioButton("Skriva ut");   
@@ -78,7 +78,7 @@ public class Diary extends JFrame
           msg += "med följande tillägg:\n"
               + tops;
       JOptionPane.showMessageDialog(   
-          buttonOK, msg, "Your Order",
+          buttonOK, msg, "",
           JOptionPane.INFORMATION_MESSAGE);
 
       sort.setSelected(false);   
