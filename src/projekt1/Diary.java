@@ -15,6 +15,7 @@ public class Diary extends JFrame
   private JCheckBox sort, deadlines, plusday;
   String printning;
   int uppgift;
+  //
   public Diary()
   {
 	//  this.setSize(1920,1080);
